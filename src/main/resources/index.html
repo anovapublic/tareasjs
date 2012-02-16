@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"
+	content="width=device-width; initial-scale=1.0; maximum-scale=1.0; 
+user-scalable=0; user-scalable=0;">
+<!-- meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"-->
+<meta charset="utf-8">
+<title>Tareas</title>
+<script type="text/javascript" src="${index.js}"></script>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+	<div id="list" data-role="page">
+		<div data-role="header">
+			<h1>Lista de tareas</h1>
+		</div>
+		<div id="scroll" data-role="content">
+			<ul id="tasks" data-role="listview">
+			</ul>
+		</div>
+		<div data-role="footer" class="ui-bar" data-id="task_footer">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#" id="create_go" 
+					data-role="button" data-icon="plus" class="left">Tareas</a>
+			</div>
+		</div>
+	</div>
+	<div id="create" data-role="page">
+		<div data-role="header">
+			<h1>Crear tarea</h1>
+		</div>
+		<div data-role="content">
+			<form id="taskentry">
+				<fieldset>
+					<div data-role="fieldcontain">
+						<label class="input-text" for="taskname">
+							Nombre:
+						</label>
+						<input type="text" class="required"
+							name="task[name]" id="taskname" />
+					</div>
+					<div data-role="fieldcontain">
+						<label class="input-text" for="taskdesc">
+							Descripción:
+						</label>
+						<textarea id="taskdesc" class="input-text" 
+							name="task[description]" rows="5"></textarea>
+					</div>
+				</fieldset>
+				<button id="save" type="submit" dname="submit" value="submit-value">Guardar</button>
+			</form>
+			<div id="errors"></div>
+		</div>
+		<div data-role="footer" class="ui-bar" data-id="task_footer">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#" class="list_go left" 
+					data-role="button" data-icon="arrow-l">Lista</a>
+			</div>
+		</div>
+	</div>
+	<div id="detail" data-role="page">
+		<div data-role="header">
+			<h1>Descripción</h1>
+		</div>
+		<div data-role="content">
+			<div id="description"></div>
+		</div>
+		<div data-role="footer" class="ui-bar" data-id="task_footer">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#" class="list_go left" data-role="button" 
+					data-icon="arrow-l">Lista</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
